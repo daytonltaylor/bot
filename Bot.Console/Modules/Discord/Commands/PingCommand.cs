@@ -6,7 +6,7 @@ namespace Bot.Console.Modules.Discord.Commands
     public class PingCommand : DiscordBotCommand
     {
         [Command("ping")]
-        public async Task Handle()
+        public async Task HandleAsync()
         {
             await ReplyAsync("Pong");
         }
