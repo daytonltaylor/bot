@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Reflection;
 using System.Threading.Tasks;
 using Discord;
@@ -70,7 +70,9 @@ namespace Bot.Console.Modules.Discord
 
             int argPos = 0;
             if (message.Author.IsBot ||
-                !message.HasStringPrefix(".", ref argPos))
+                !message.HasStringPrefix(
+                    ProjectEnvironment.CommandPrefix_Default,
+                    ref argPos))
             {
                 return;
             }
